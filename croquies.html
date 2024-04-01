@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fale Conosco</title>
+    <title>Croquies</title>
     <style>
-       
+        /* Estilos para o formulário */
         body {
             font-family: Arial, sans-serif;
-            background-color: #dac3e9;
+            background-color: #bbbfeb;
         }
         .container {
             max-width: 600px;
@@ -30,7 +30,7 @@
             border-radius: 3px;
         }
         input[type="submit"] {
-            background-color: #684294;
+            background-color: #82cfd4;
             color: #ffffff;
             border: none;
             padding: 10px 20px;
@@ -38,7 +38,7 @@
             cursor: pointer;
         }
         input[type="submit"]:hover {
-            background-color: #af7eb9;
+            background-color: #e3bdeb;
         }
     </style>
     <script>
@@ -53,19 +53,20 @@
 <body>
     <div class="container">
         <h1>Fale Conosco</h1>
-        <form action="processar_formulario.html" method="post">
-            <label for="nome">Nome:</label> <BR>
-            <input type="text" id="nome" name="nome" required> <BR> <BR>
+        <form action="processar_PEDIDO.html" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
 
-            <label for="email">E-mail:</label> <BR> 
-            <input type="email" id="email" name="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" 
-            title="Digite um endereço de e-mail válido (por exemplo, nome@domínio.com)"> <BR> <BR>
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" required>
 
-            <label for="Assunto">Assunto:</label>
-            <input type="text" id="Assunto" name="Assunto" required><BR>
+            <label for="Ideia">Ideia</label>
+            <input type="text" id="ideia" name="ideia" required>
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="5" required></textarea><BR>
+            <label for="Imagem ref">Referência</label>
+            <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+
+            <input type="file" /> <BR> <BR>
 
             <input type="submit" value="Enviar" onclick="redirecionarPaginaPrincipal()">
         </form>

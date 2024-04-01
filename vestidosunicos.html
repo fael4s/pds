@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda e Magia</title>
+    <style>
+       
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: rgb(158, 178, 216);
+            padding: 10px;
+            align-items: center;
+        }
+
+     
+        .navbar a {
+            text-decoration: none;
+            color: rgb(150, 204, 192);
+            font-size: 20px;
+            margin-right: 20px;
+        }
+
+        .slogan-icon {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+     
+        .active-tab {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda e Magia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+</head>
+<body>
+    <h1> Vestidos</h1>
+    <p>Descubra nossos exclusivos.</p>
+
+ 
+    <label for="filtro">Filtrar por:</label>
+    <select id="filtro" onchange="selecionarOpcao()">
+        <option value="selecione">selecione</option>
+        <option value="curtos">Vestidos Curtos</option>
+        <option value="longos">Vestidos Longos</option>
+        <option value="mid">Vestidos Mid</option>
+    </select>
+
+    <div id="conteudo"></div>
+
+    <script>
+        function selecionarOpcao() {
+            const filtro = document.getElementById("filtro").value;
+            const conteudo = document.getElementById("conteudo");
+
+            if (filtro === "curtos") {
+                conteudo.innerHTML = `
+                    <h2>Vestidos Curtos</h2>
+                    <img src="https://i.pinimg.com/736x/c9/0c/5d/c90c5d8b7f733612caf84736175eba9a.jpg" alt="Vestidos Curtos"> <BR>
+                    <img src="https://i.pinimg.com/736x/bc/5b/1f/bc5b1f2aa0e65fffbed1aa2b476b6cf5.jpg" alt="Vestidos Curtos">
+                    
+                `;
+            } else if (filtro === "longos") {
+                conteudo.innerHTML = `
+                    <h2>Vestidos Longos</h2>
+                    <img src="https://i.pinimg.com/564x/f3/b5/1e/f3b51e06d84f7af69c625a6243735c81.jpg" alt="Vestidos Longos"> <BR>
+                    <img src="https://i.pinimg.com/564x/e4/87/01/e48701e90925bde9707fab83ef5f4b8c.jpg" alt="Vestidos Longos">
+                 
+                `;
+            } else if (filtro === "mid") {
+                conteudo.innerHTML = `
+                    <h2>Vestidos Mid</h2>
+                    <img src="https://i.pinimg.com/564x/57/6c/bc/576cbcc3676f9d53a1b5eaece506a062.jpg" alt="Vestidos Mid"> <BR>
+                    <img src="https://i.pinimg.com/736x/99/6c/02/996c02fc2d4bdef6ac201137f92c3619.jpg" alt="Vestidos Mid">
+                   
+                `;
+            } else {
+                conteudo.innerHTML = `
+                    <h2>selecione</h2>
+                    ` }
+        }
+    </script>
+</body>
+</html>

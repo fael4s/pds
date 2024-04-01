@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calças</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta nome="viewport" content="width=, initial-scaled1.0">
+    <title>Moda e Magia</title>
+    <link rel="Stylesheet" type = "text/css" href="styles.css">
+    <style>
+        h1 {
+          text-align: center;
+        }
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        th, td {
+          border: 1px solid #fc54e5;
+          padding: 8px;
+          text-align: left;
+        }
+        th {
+          background-color: #a899c4;
+        }
+      </style>
+      <style>
+        body {
+            background-color: rgb(120, 90, 148);
+            color: rgb(0, 0, 0);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #ecb9fc;
+        }
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Calças</h1>
+    <p>Calças enfeitiçadas!</p>
+
+    <label for="filtro">Filtrar por:</label>
+    <select id="filtro" onchange="selecionarOpcao()">
+        <option value="selecione">selecione</option>
+        <option value="jeans">Calças Jeans</option>
+        <option value="alfaiataria">Calças de Alfaiataria</option>
+        <option value="legging">Calças Legging</option>
+        <option value="cargo">Calças Cargo</option>
+        <option value="moletom">Calças de Moletom</option>
+    </select>
+
+    <div id="conteudo"></div>
+
+    <script>
+        function selecionarOpcao() {
+            const filtro = document.getElementById("filtro").value;
+            const conteudo = document.getElementById("conteudo");
+
+            if (filtro === "jeans") {
+                conteudo.innerHTML = `
+                    <h2>Calças Jeans</h2>
+                    <img src="https://i.pinimg.com/564x/c9/6e/f9/c96ef9c413a77eccf10429eb74453868.jpg" alt="Calças Jeans">
+                `;
+            } else if (filtro === "alfaiataria") {
+                conteudo.innerHTML = `
+                    <h2>Calças de Alfaiataria</h2>
+                    <img src="https://i.pinimg.com/736x/6f/33/df/6f33df05e36bede98a080f6bdf8976aa.jpg" alt="Calças de Alfaiataria">
+                `;
+            }  else if (filtro === "legging") {
+                conteudo.innerHTML = `
+                    <h2>Calças de legging </h2>
+                    <img src="https://i.pinimg.com/564x/3c/1a/63/3c1a63ab9a905cb0ccad78ce45a9f9de.jpg" alt="Calças de Alfaiataria">
+                `;
+            } else if (filtro === "cargo") {
+                conteudo.innerHTML = `
+                    <h2>Calça cargo</h2>
+                    <img src="https://i.pinimg.com/736x/d6/2e/aa/d62eaa4ab21972adae4b04300cc048b5.jpg" alt="Vestidos Longos">
+                 
+                `;
+            } else if (filtro === "moletom") {
+                conteudo.innerHTML = `
+                    <h2>Calça moletom</h2>
+                    <img src="https://i.pinimg.com/564x/5c/58/a5/5c58a54410d99fc291bcdf4ba82ad60c.jpg" alt="Vestidos Midi">
+                   
+                    `;
+                  
+            } else {
+                conteudo.innerHTML = `
+                    <h2>selecione</h2>
+                    ` }
+            }
+        
+    </script>
+</body>
+</html>

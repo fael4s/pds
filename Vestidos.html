@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestidos</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta nome="viewport" content="width=, initial-scaled1.0">
+        <title>Moda e Magia</title>
+        <link rel="Stylesheet" type = "text/css" href="styles.css">
+        <style>
+            h1 {
+              text-align: center;
+            }
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+            th, td {
+              border: 1px solid #fc54e5;
+              padding: 8px;
+              text-align: left;
+            }
+            th {
+              background-color: #a899c4;
+            }
+          </style>
+          <style>
+            body {
+                background-color: rgb(120, 90, 148);
+                color: rgb(0, 0, 0);
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid white;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #ecb9fc;
+            }
+     
+        
+        </style>
+
+    </head>
+</head>
+<body>
+    <h1> Vestidos</h1>
+    <p>Magia dos Vestidos!</p>
+
+ 
+    <label for="filtro">Filtrar por:</label>
+    <select id="filtro" onchange="selecionarOpcao()">
+        <option value="selecione">selecione</option>
+        <option value="curtos">Vestidos Curtos</option>
+        <option value="longos">Vestidos Longos</option>
+        <option value="mid">Vestidos Mid</option>
+        <option value="festa">Vestidos de Festa</option>
+        <option value="gala">Vestidos de Gala</option>
+    </select>
+
+    <div id="conteudo"></div>
+
+    <script>
+        function selecionarOpcao() {
+            const filtro = document.getElementById("filtro").value;
+            const conteudo = document.getElementById("conteudo");
+
+            if (filtro === "curtos") {
+                conteudo.innerHTML = `
+                    <h2>Vestidos Curtos</h2>
+                    <img src="Meddy.jpg" alt="Vestidos Curtos">
+                    
+                `;
+            } else if (filtro === "longos") {
+                conteudo.innerHTML = `
+                    <h2>Vestidos Longos</h2>
+                    <img src="https://i.pinimg.com/564x/25/1a/ae/251aae7a993bb256f704b3fbbded4683.jpg" alt="Vestidos Longos">
+                 
+                `;
+            } else if (filtro === "mid") {
+                conteudo.innerHTML = `
+                    <h2>Vestidos Mid</h2>
+                    <img src="https://i.pinimg.com/564x/37/70/7f/37707f02baf8f74ec15a871447e17e53.jpg" alt="Vestidos Mid">
+                   
+                `;
+            } else if (filtro === "festa") {
+                conteudo.innerHTML = `
+                    <h2>Vestidos de Festa</h2>
+                    <img src="https://i.pinimg.com/564x/88/39/8b/88398bb08c190fecb876d3c54e60850b.jpg" alt="Vestidos de Festa">
+                  
+                `;
+            } else if (filtro === "gala") {
+                conteudo.innerHTML = `
+                    <h2>Vestidos de Gala</h2>
+                    <img src="https://i.pinimg.com/564x/f2/d6/12/f2d612c0008e8057f60464b9004f94b6.jpg" alt="Vestidos de Gala">
+                    
+                    `;
+            } else {
+                conteudo.innerHTML = `
+                    <h2>selecione</h2>
+                    ` }
+        }
+    </script>
+</body>
+</html>
