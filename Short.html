@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorts</title>
+
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta nome="viewport" content="width=, initial-scaled1.0">
+    <title>Moda e Magia</title>
+    <link rel="Stylesheet" type = "text/css" href="styles.css">
+    <style>
+        h1 {
+          text-align: center;
+        }
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        th, td {
+          border: 1px solid #fc54e5;
+          padding: 8px;
+          text-align: left;
+        }
+        th {
+          background-color: #a899c4;
+        }
+      </style>
+      <style>
+        body {
+            background-color: rgb(120, 90, 148);
+            color: rgb(0, 0, 0);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #ecb9fc;
+        }
+       
+    </style>
+
+</head>
+<body>
+    <h1>Shorts</h1>
+    <p>Explore a Variedade de Shorts!</p>
+
+    <label for="filtro">Filtrar por:</label>
+    <select id="filtro" onchange="selecionarOpcao()">
+        <option value="selecione">selecione</option>
+        <option value="jeans">Shorts Jeans</option>
+        <option value="esportivos">Shorts Esportivos</option>
+        <option value="casuais">Shorts Casuais</option>
+        <option value="praia">Shorts de Praia</option>
+        <option value="sociais">Shorts Sociais</option>
+    </select>
+
+    <div id="conteudo"></div>
+
+    <script>
+        function selecionarOpcao() {
+            var filtro = document.getElementById('filtro').value;
+            var conteudo = document.getElementById('conteudo');
+            conteudo.innerHTML = ''; // Limpa o conteúdo anterior
+
+            if (filtro === 'jeans') {
+
+         conteudo.innerHTML = `
+                    <h2>Short Jeans</h2>
+                    <img src="https://i.pinimg.com/564x/f7/a1/35/f7a1356f7e2a8a60af6103c390f0389f.jpg" alt="jeans">
+                 
+                `;
+
+            } else if (filtro === 'esportivos') {
+                conteudo.innerHTML = `
+                    <h2>Shorts Esportivos</h2>
+                    <img src="https://i.pinimg.com/564x/89/3b/0a/893b0aa8bb4122d552692ba2549e51c3.jpg" alt="Shorts Esportivos">
+                 
+                `;
+
+
+            } else if (filtro === 'casuais') {
+
+                conteudo.innerHTML = `
+                    <h2>Shorts casuais</h2>
+                    <img src="https://i.pinimg.com/736x/f0/6b/66/f06b6699c5179d1fad071a5b40f18d3c.jpg" alt="Shorts Casuais">
+                 
+                `;
+
+
+            } else if (filtro === 'praia') {
+
+                conteudo.innerHTML = `
+                    <h2>Shorts de praia</h2>
+                    <img src="https://i.pinimg.com/736x/96/42/0f/96420f7a41e7a574b29f21ca997135d4.jpg" alt="Shorts de praia">
+                 
+                `;
+
+
+            } else if (filtro === 'sociais') {
+
+                conteudo.innerHTML = `
+                    <h2>Shorts sociais</h2>
+                    <img src="https://i.pinimg.com/736x/a5/0e/87/a50e87ce9dde1041a8a39d0cdd5eb6d4.jpg" alt="Shorts sociais">
+                 
+                `;
+
+
+            } else {
+                conteudo.innerHTML = `
+                    <h2>selecione</h2>
+                    ` }
+        }
+    </script>
+</body>
+</html>
